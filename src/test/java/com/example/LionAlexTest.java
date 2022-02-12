@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 public class LionAlexTest {
     private LionAlex alex;
     @Mock
-    Feline feline;
+    private Feline feline;
 
     @Before
     public void initNewLionAlex() throws Exception {

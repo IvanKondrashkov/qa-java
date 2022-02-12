@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class CatTest {
     private Cat cat;
     @Mock
-    Feline feline;
+    private Feline feline;
 
     @Before
     public void initNewCat() {

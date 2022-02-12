@@ -4,19 +4,12 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
+import org.mockito.junit.MockitoJUnitRunner;
 import static org.junit.Assert.*;
 
-@RunWith(Parameterized.class)
+@RunWith(MockitoJUnitRunner.class)
 public class FelineTest {
-    private final int kittensCount;
-    private final int expected;
     private Feline feline;
-
-    public FelineTest(int kittensCount, int expected) {
-        this.kittensCount = kittensCount;
-        this.expected = expected;
-    }
 
     @Before
     public void initNewFeline() {
@@ -46,21 +39,5 @@ public class FelineTest {
         int expected = 1;
 
         assertEquals(expected, actual);
-    }
-
-    @Test
-    public void getKittensTheArg() {
-        int actual = feline.getKittens(kittensCount);
-
-        assertEquals(expected, actual);
-    }
-
-    @Parameterized.Parameters
-    public static Object[][] getKittensTheArgData() {
-        return new Object[][] {
-                {1, 1},
-                {2, 2},
-                {3, 3}
-        };
     }
 }
